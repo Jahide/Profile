@@ -26,6 +26,11 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
 }
+.card h1.editable {
+    cursor: pointer;
+    border-bottom: 1px dashed #fff;
+}
+
 
 .card img {
     width: 140px;
