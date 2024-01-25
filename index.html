@@ -60,6 +60,25 @@
     </div>
 
     <script src="vanilla-tilt.js"></script>
+    <script>
+    function changePhoto(input) {
+        const file = input.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.querySelector('.card img').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function changeName(input) {
+        const newName = input.value;
+        document.querySelector('.card h1').textContent = newName;
+        document.querySelector('.card h2').textContent = newName;
+    }
+    </script>
+    
 
 
 
