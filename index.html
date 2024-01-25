@@ -61,16 +61,30 @@
 
     <script src="vanilla-tilt.js"></script>
     <script>
+    <script>
     function changePhoto(input) {
         const file = input.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
-                document.querySelector('.card img').src = e.target.result;
+                const image = document.querySelector('.card img');
+                image.src = e.target.result;
+
+                // Update styles after changing the photo
+                image.style.width = '140px';
+                image.style.borderRadius = '60%';
             };
             reader.readAsDataURL(file);
         }
     }
+
+    function changeName(input) {
+        const newName = input.value;
+        document.querySelector('.card h1').textContent = newName;
+        document.querySelector('.card h2').textContent = newName;
+    }
+</script>
+    
 
     
     document.querySelector('.card h1').addEventListener('click', function () {
