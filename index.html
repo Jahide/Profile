@@ -19,7 +19,13 @@
 
         <div class="card" data-tilt>
 
-            <img src="elilo.jpg" >
+     
+    <label for="upload-photo">
+        <img src="edit.png" alt="Edit">
+    </label>
+    <input type="file" id="upload-photo" style="display: none;" accept="image/*" onchange="changePhoto(this)">
+    <input type="text" id="change-name" placeholder="Change Name" oninput="changeName(this)">
+
 
             <h1>TEAM PRADIP</h1>
 
