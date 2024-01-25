@@ -72,12 +72,57 @@
         }
     }
 
-    function changeName(input) {
-        const newName = input.value;
-        document.querySelector('.card h1').textContent = newName;
-       
+    
+    document.querySelector('.card h1').addEventListener('click', function () {
+        editName();
+    });
+
+    function editName() {
+        const nameElement = document.querySelector('.card h1');
+        const currentName = nameElement.textContent;
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = currentName;
+
+        input.addEventListener('blur', function () {
+            nameElement.textContent = this.value;
+            this.parentNode.removeChild(this);
+        });
+
+        nameElement.textContent = '';
+        nameElement.appendChild(input);
+        input.focus();
     }
-    </script>
+ 
+    const nameElement = document.querySelector('.card h1');
+    nameElement.addEventListener('click', function () {
+        editName();
+    });
+
+    function editName() {
+        nameElement.classList.add('editable');
+
+        const currentName = nameElement.textContent;
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = currentName;
+
+        input.addEventListener('blur', function () {
+            nameElement.textContent = this.value;
+            nameElement.classList.remove('editable');
+            this.parentNode.removeChild(this);
+        });
+
+        nameElement.textContent = '';
+        nameElement.appendChild(input);
+        input.focus();
+    }
+</script>
+    
+
+    
     
 
 
