@@ -24,12 +24,20 @@
 
     .card {
         width: 90%;
-        padding: 30px;
+        padding: 20px; /* Adjust padding based on your design */
+        max-width: 100%; /* Ensure the card doesn't exceed the screen width */
     }
 
     .card img {
         width: 100%;
         border-radius: 0; /* Adjust as needed */
+    }
+
+    .card h1,
+    .card h2,
+    .card p,
+    .q a {
+        font-size: 16px; /* Adjust font sizes for better mobile readability */
     }
 }
 
