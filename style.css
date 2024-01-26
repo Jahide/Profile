@@ -14,6 +14,25 @@
     align-items: center;
     justify-content: center;
 }
+/* Existing styles */
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    .container {
+        background-size: auto; /* Adjust as needed for your design */
+    }
+
+    .card {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 0; /* Adjust as needed */
+    }
+}
+
 .card {
     width: 90%;
     max-width: 440px ;
